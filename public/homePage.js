@@ -73,8 +73,8 @@ favoritesWidget.addUserCallback   = function(data){
         if(answer.success){
             favoritesWidget.clearTable();
             favoritesWidget.fillTable(answer.data);
-            favoritesWidget.updateUsersList(answer.data);
             favoritesWidget.setMessage(true, 'Пользователь успешно добавлен в избранные!');
+            favoritesWidget.updateUsersList(answer.data);
         } else {
             favoritesWidget.setMessage(false, 'Добавление пользователя в избранные не удалось:\n' + answer.error);
         }
@@ -86,8 +86,8 @@ favoritesWidget.removeUserCallback  = function(data){
         if(answer.success){
             favoritesWidget.clearTable();
             favoritesWidget.fillTable(answer.data);
-            favoritesWidget.updateUsersList(answer.data);
             favoritesWidget.setMessage(true, 'Пользователь успешно удален из избранных!');
+            favoritesWidget.updateUsersList(answer.data);
         } else {
             favoritesWidget.setMessage(false, 'Удаление пользователя из избранных не удалось:\n' + answer.error);
         }
